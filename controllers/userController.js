@@ -1,5 +1,5 @@
-const filePath = require("./database.json");
-const { readData, writeData } = require("../utils/files.js");
+const filePath = require("../database.json");
+const { readData, writeData } = require("../utils/file.js");
 
 //controller file. controller files handle user input and application logic
 
@@ -33,3 +33,7 @@ async function createUser(req, res) {
     res.status(500).json({ message: "Internal Server Error" });
   }
 }
+
+module.exports = {
+  createUser,
+};

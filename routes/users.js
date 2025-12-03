@@ -1,6 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
 const { readData } = require('../utils/file.js');
+const userController =  require('../controllers/userController.js');
+
+
 router.get('/home', (req, res)=>{
     res.render('home');
 });
@@ -18,5 +22,7 @@ router.get('/api/v1/users', async (req, res)=>{
         console.log(error);
     }
 });    
+
+router.post('/users', userController.createUser);
 
 module.exports = router;
