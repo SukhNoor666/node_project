@@ -27,7 +27,6 @@ app.use(userRoute);
 app.use(express.static('public'));
 
 
-
 mongoose.connect(url)
 .then(() =>{
     console.log("Connected to MongoDB");
