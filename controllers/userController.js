@@ -1,7 +1,8 @@
 const filePath = require("../database.json");
 const { readData, writeData } = require("../utils/file.js");
+const User = require("../models/userModel.js");
 
-//controller file. controller files handle user input and application logic
+//controller files handle user input and application logic
 
 async function createUser(req, res) {
   try {
@@ -11,8 +12,8 @@ async function createUser(req, res) {
     //logic to auto increment the id
     const lastUser = data.users[data.users.length - 1];
 
-    //what happers if there are no users?
-    const nextId = lastUser ? lastUser.id + 1 : 0;
+    //what happens if there are no users?
+    const nextId = lastUser ? parseInt(lastUser.id) + 1 : 0;
 
     //creating the new user object
     const newUser = {
@@ -22,7 +23,10 @@ async function createUser(req, res) {
       email: req.body.email,
     };
 
-    //push the data to the users array object
+    const user = new User(newUser);
+    await user.save();
+
+    //push the data to the user array object
     data.users.push(newUser);
 
     //write the data back to the file
@@ -35,5 +39,5 @@ async function createUser(req, res) {
 }
 
 module.exports = {
-  createUser,
-};
+    createUser
+}

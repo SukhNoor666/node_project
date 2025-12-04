@@ -4,10 +4,11 @@ const pagesRoute = require('./routes/pages.js');
 const userRoute = require('./routes/users.js');
 const ejs = require('ejs');
 const rateLimit = require('express-rate-limit');
-const port = 3000;
-require('dotenv').config();
 const mongoose = require('mongoose');
+require('dotenv').config();
 const url = process.env.MONGODB_URI;
+const port = 8080;
+
 
 app.set('view engine', 'ejs');
 app.set('views', './views');

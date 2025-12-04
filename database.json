@@ -17,7 +17,12 @@
       "first_name": "John",
       "username": "Harsh",
       "email": "Harsh@example.com"
+    },
+    {
+      "id": 4,
+      "first_name": "Stacy",
+      "username": "hazel",
+      "email": "stacy@example.com"
     }
   ]
-
 }
