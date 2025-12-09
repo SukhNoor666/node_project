@@ -5,6 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "accepts": "^2.0.0",
+    "apicache": "^1.6.3",
     "async": "^3.2.6",
     "balanced-match": "^1.0.2",
     "body-parser": "^2.2.0",
@@ -99,5 +100,8 @@
   "bugs": {
     "url": "https://github.com/SukhNoor666/node_project/issues"
   },
-  "homepage": "https://github.com/SukhNoor666/node_project#readme"
+  "homepage": "https://github.com/SukhNoor666/node_project#readme",
+  "devDependencies": {
+    "express-caching": "^1.0.1"
+  }
 }

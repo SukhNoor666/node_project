@@ -23,6 +23,12 @@
       "first_name": "Stacy",
       "username": "hazel",
       "email": "stacy@example.com"
+    },
+    {
+      "id": 5,
+      "first_name": "John",
+      "username": "john_doe",
+      "email": "john.doe@example.com"
     }
   ]
 }

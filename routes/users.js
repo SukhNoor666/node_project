@@ -3,9 +3,10 @@ const router = express.Router();
 const path = require('path');
 const { readData } = require('../utils/file.js');
 const userController =  require('../controllers/userController.js');
+const apicache = require("apicache");
+let cache = apicache.middleware;
 
-
-router.get('/home', (req, res)=>{
+router.get('/home', cache('5 minutes'), (req, res)=>{
     res.render('home');
 });
 
